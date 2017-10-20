@@ -17,9 +17,13 @@ exec ros -Q -- $0 "$@"
   (ros:quicklisp)
   (funcall (find-symbol #.(string :quickload) :ql) :uiop :silent t))
 
+(unless (wexl:directory-exists-p "~/.wexl")
+  (wexl:init))
+
 (defun main (source-pathname target-pathname target-block-name &rest argv)
   (declare (ignorable argv))
   #-:windows
   (progn 
-    (transpile source-pathname target-pathname target-block-name)))
+    (transpile source-pathname target-pathname target-block-name))
+  (format t "~A~%" target-pathname))
 ;;; vim: set ft=lisp lisp:
