@@ -1,0 +1,23 @@
+#!/bin/sh
+#|-*- mode:lisp -*-|#
+#| <Put a one-line description here>
+exec ros -Q -- $0 "$@"
+|#
+(progn
+  (ros:ensure-asdf)
+  #+quicklisp
+  (unless (find-package :wexl)
+    (ql:quickload :wexl :silent t)))
+
+(defpackage #:ros.script.wexl
+  (:use :cl :wexl))
+(in-package #:ros.script.wexl)
+
+(unless (find-package :uiop)
+  (ros:quicklisp)
+  (funcall (find-symbol #.(string :quickload) :ql) :uiop :silent t))
+
+(defun main (&rest argv)
+  (declare (ignorable argv))
+  (format t "~A~%" argv))
+;;; vim: set ft=lisp lisp:
