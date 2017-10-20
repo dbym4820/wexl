@@ -17,9 +17,9 @@ exec ros -Q -- $0 "$@"
   (ros:quicklisp)
   (funcall (find-symbol #.(string :quickload) :ql) :uiop :silent t))
 
-(defun main (&rest argv)
+(defun main (source-pathname target-pathname target-block-name &rest argv)
   (declare (ignorable argv))
-  #-windows
+  #-:windows
   (progn 
-    (format t "~A~%" argv)))
+    (transpile source-pathname target-pathname target-block-name)))
 ;;; vim: set ft=lisp lisp:
