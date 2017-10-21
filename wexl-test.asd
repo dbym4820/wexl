@@ -12,7 +12,7 @@
   :author "Tomoki ABURATANI"
   :license "MIT"
   :depends-on (:wexl
-               :rove)
+               :prove)
   :components ((:module "t"
                 :components
                 ((:test-file "wexl"))))

@@ -19,7 +19,7 @@
 	       :jonathan
 	       :cl-json
 	       :cl-who
-               :rove)
+               :prove)
   :components ((:module "src"
                 :components
                 ((:file "wexl" :depends-on ("util" "file"))
