@@ -18,11 +18,11 @@
 	       :cl-fad
 	       :jonathan
 	       :cl-json
-	       :cl-who)
+	       :cl-who
+               :rove)
   :components ((:module "src"
                 :components
-                ((:file "wexl" :depends-on ("convert" "util" "file"))
-		 (:file "convert")
+                ((:file "wexl" :depends-on ("util" "file"))
 		 (:file "util")
 		 (:file "file" :depends-on ("util")))))
   :description "Parenscript transpiler"
