@@ -35,7 +35,7 @@ Make parenscript file.
 Convert sample.lisp to sample.js
 
 ```sh:
-? wexl ~/.wexl/sample.lisp ~/.wexl/sample.js sample.js
+? wexl ~/.wexl/sample.lisp ~/.wexl/sample.js sample-js
 ```
 
 Confirm ~/.wexl/sample.js
