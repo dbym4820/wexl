@@ -54,3 +54,4 @@
   (load source-file-path)
   (make-file target-file-path
 	     (funcall (read-from-string target-block))))
+

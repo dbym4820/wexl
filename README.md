@@ -20,6 +20,12 @@ Parenscript transpiler
 ? export PATH=$PATH:~/.roswell/bin/
 ```
 
+4. Initialize
+
+```sh:
+? wexl init
+```
+
 ## Usage
 
 Make parenscript file.
@@ -35,7 +41,7 @@ Make parenscript file.
 Convert sample.lisp to sample.js
 
 ```sh:
-? wexl ~/.wexl/sample.lisp ~/.wexl/sample.js sample-js
+? wexl transpile ~/.wexl/sample.lisp ~/.wexl/sample.js sample-js
 ```
 
 Confirm ~/.wexl/sample.js
